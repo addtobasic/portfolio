@@ -37,5 +37,6 @@ yarn-error.log*
 *.tsbuildinfo
 
 # Firebase Hosting
+.firebase
 .firebaserc
 firebase-debug.log
