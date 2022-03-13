@@ -19,6 +19,9 @@ module.exports = {
       lg: '1024px',
       xl: '1280px',
     },
+    inset: {
+      '1/2': '50%',
+    },
   },
   variants: {
     extend: {},
