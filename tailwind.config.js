@@ -4,19 +4,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        blue: {
-          450: '#1ea7fd',
-        },
+        'primary-dark-color': '#263238',
       },
     },
     fontFamily: {
-      sans: [
-        'Nunito Sans',
-        'Helvetica Neue',
-        'Helvetica',
-        'Arial',
-        'sans-serif',
-      ],
+      'base-text': ['Roboto'],
     },
     boxShadow: {
       inner: 'rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset',
