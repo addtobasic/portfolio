@@ -35,28 +35,28 @@ export const LinkIcon: React.FC<LinkIconProps> = () => {
     <IconContext.Provider value={{ color: 'white', size: '30px' }}>
       <div className='flex max-w-md'>
         <span className='flex-1 px-6 sm:px-2'>
-          <a href={LINK_ICON_ITEM[0].url}>
+          <a href={LINK_ICON_ITEM[0].url} target='_blank' rel='noreferrer'>
             <FaTwitter />
           </a>
         </span>
         <span className='flex-1 px-6 sm:px-2'>
-          <a href={LINK_ICON_ITEM[1].url}>
+          <a href={LINK_ICON_ITEM[1].url} target='_blank' rel='noreferrer'>
             <FaGithub />
           </a>
         </span>
         <span className='flex-1 px-6 sm:px-2'>
-          <a href={LINK_ICON_ITEM[2].url}>
+          <a href={LINK_ICON_ITEM[2].url} target='_blank' rel='noreferrer'>
             <FaFacebook />
           </a>
         </span>
         <span className='flex-1 px-6 sm:px-2'>
-          <a href={LINK_ICON_ITEM[3].url}>
+          <a href={LINK_ICON_ITEM[3].url} target='_blank' rel='noreferrer'>
             <FaInstagram />
           </a>
         </span>
 
         <span className='flex-none px-6 sm:px-2'>
-          <a href={LINK_ICON_ITEM[4].url}>
+          <a href={LINK_ICON_ITEM[4].url} target='_blank' rel='noreferrer'>
             <FaPenSquare />
           </a>
         </span>
