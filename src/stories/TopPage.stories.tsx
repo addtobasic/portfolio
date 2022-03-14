@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { TopPage } from '../components/TopPage';
-import { LinkIcon } from '../components/LinkIcon';
+import { LinkIcon } from '../components/TopPage/LinkIcon';
 import styles from '../styles/Home.module.css';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export

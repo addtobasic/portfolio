@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { LinkIcon } from './LinkIcon';
-import styles from '../styles/Home.module.css';
+import styles from '../../styles/Home.module.css';
 
 export const TopPage: FC = () => {
   return (

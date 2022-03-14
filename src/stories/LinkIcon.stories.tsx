@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { LinkIcon, LINK_ICON_ITEM } from '../components/LinkIcon';
+import { LinkIcon, LINK_ICON_ITEM } from '../components/TopPage/LinkIcon';
 import { IconContext } from 'react-icons';
 import {
   FaTwitter,
