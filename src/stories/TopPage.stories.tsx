@@ -1,8 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { TopPage } from '../components/TopPage';
-import { LinkIcon } from '../components/TopPage/LinkIcon';
-import styles from '../styles/Home.module.css';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -25,25 +23,9 @@ export default {
 } as ComponentMeta<typeof TopPage>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof TopPage> = () => (
-  <div className='bg-primary-dark-color min-w-screen min-h-screen'>
-    <div className={styles.center}>
-      <div className='flex justify-center'>
-        <div className={styles.icon} />
-      </div>
-      <h1 className='flex justify-center pt-6 text-white text-4xl font-base-text'>
-        Genshi
-      </h1>
-      <h2 className='flex justify-center pt-1 pb-6 text-white text-2xl font-base-text'>
-        Genki Kano
-      </h2>
-      <div className='flex justify-center'>
-        <LinkIcon />
-      </div>
-    </div>
-  </div>
+const Template: ComponentStory<typeof TopPage> = (args) => (
+  <TopPage {...args} />
 );
-
 export const Primary = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 Primary.args = {};

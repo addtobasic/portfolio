@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { LinkIcon } from '../components/TopPage/LinkIcon';
+import { AboutCard } from '../components/About/AboutCard';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -8,8 +8,8 @@ export default {
    * See https://storybook.js.org/docs/react/configure/overview#configure-story-loading
    * to learn how to generate automatic titles
    */
-  title: 'LinkIcon',
-  component: LinkIcon,
+  title: 'AboutCard',
+  component: AboutCard,
   //👇 Creates specific parameters for the story
   parameters: {
     backgrounds: {
@@ -20,11 +20,11 @@ export default {
       ],
     },
   },
-} as ComponentMeta<typeof LinkIcon>;
+} as ComponentMeta<typeof AboutCard>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof LinkIcon> = (args) => (
-  <LinkIcon {...args} />
+const Template: ComponentStory<typeof AboutCard> = (args) => (
+  <AboutCard {...args} />
 );
 
 export const Primary = Template.bind({});
