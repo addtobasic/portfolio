@@ -1,10 +1,9 @@
 import { FC } from 'react';
-// import { client } from '../../lib/client';
 import type { Product } from '../../../types/product';
 import { ProductCard } from './ProductCard';
 
 export type ProductsProps = {
-  products: Array<Product>;
+  products: Product[];
 };
 
 export const Products: FC<ProductsProps> = ({ products }: ProductsProps) => {

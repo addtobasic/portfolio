@@ -7,11 +7,13 @@ import { client } from '../lib/client';
 import { Products } from '../components/Products';
 import type { Product } from '../../types/product';
 
-export type ProductsProps = {
-  products: Array<Product>;
-};
+import { Histories } from '../components/Histories';
+import type { History } from '../../types/history';
 
-export default function Home({ products }: ProductsProps) {
+export default function Home(props: {
+  products: Product[];
+  histories: History[];
+}) {
   return (
     <div>
       <Head>
@@ -21,17 +23,20 @@ export default function Home({ products }: ProductsProps) {
       </Head>
       <TopPage />
       <About />
-      <Products products={products} />
+      <Products products={props.products} />
+      <Histories histories={props.histories} />
     </div>
   );
 }
 
 export const getStaticProps = async () => {
-  const data = await client.get({ endpoint: 'products' });
+  const products_data = await client.get({ endpoint: 'products' });
+  const histories_data = await client.get({ endpoint: 'histories' });
 
   return {
     props: {
-      products: data.contents,
+      products: products_data.contents,
+      histories: histories_data.contents,
     },
   };
 };
