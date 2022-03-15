@@ -1,10 +1,17 @@
-import type { NextPage } from 'next';
 import Head from 'next/head';
 
 import { TopPage } from '../components/TopPage';
 import { About } from '../components/About';
+import { client } from '../lib/client';
 
-const Home: NextPage = () => {
+import { Products } from '../components/Products';
+import type { Product } from '../../types/product';
+
+export type ProductsProps = {
+  products: Array<Product>;
+};
+
+export default function Home({ products }: ProductsProps) {
   return (
     <div>
       <Head>
@@ -14,8 +21,17 @@ const Home: NextPage = () => {
       </Head>
       <TopPage />
       <About />
+      <Products products={products} />
     </div>
   );
-};
+}
 
-export default Home;
+export const getStaticProps = async () => {
+  const data = await client.get({ endpoint: 'products' });
+
+  return {
+    props: {
+      products: data.contents,
+    },
+  };
+};
