@@ -1,9 +1,9 @@
 export type Product = {
-  id: string;
-  createdAt: string;
-  updatedAt: string;
-  publishedAt: string;
-  revisedAt: string;
+  id?: string;
+  createdAt?: string;
+  updatedAt?: string;
+  publishedAt?: string;
+  revisedAt?: string;
   title: string;
   content: string;
   image: {
