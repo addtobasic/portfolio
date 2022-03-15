@@ -1,10 +1,19 @@
-import type { NextPage } from 'next';
 import Head from 'next/head';
 
 import { TopPage } from '../components/TopPage';
 import { About } from '../components/About';
+import { client } from '../lib/client';
 
-const Home: NextPage = () => {
+import { Products } from '../components/Products';
+import type { Product } from '../../types/product';
+
+import { Histories } from '../components/Histories';
+import type { History } from '../../types/history';
+
+export default function Home(props: {
+  products: Product[];
+  histories: History[];
+}) {
   return (
     <div>
       <Head>
@@ -14,8 +23,20 @@ const Home: NextPage = () => {
       </Head>
       <TopPage />
       <About />
+      <Products products={props.products} />
+      <Histories histories={props.histories} />
     </div>
   );
-};
+}
 
-export default Home;
+export const getStaticProps = async () => {
+  const products_data = await client.get({ endpoint: 'products' });
+  const histories_data = await client.get({ endpoint: 'histories' });
+
+  return {
+    props: {
+      products: products_data.contents,
+      histories: histories_data.contents,
+    },
+  };
+};
