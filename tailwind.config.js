@@ -6,6 +6,8 @@ module.exports = {
       colors: {
         'primary-dark-color': '#263238',
         'primary-light-color': '#F9F9F9',
+        'bg-products-color': '#25292F',
+        'bg-product-card-color': '#37474F',
       },
     },
     fontFamily: {
