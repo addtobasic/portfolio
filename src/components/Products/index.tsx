@@ -9,7 +9,7 @@ export type ProductsProps = {
 export const Products: FC<ProductsProps> = ({ products }: ProductsProps) => {
   return (
     <div className='bg-bg-products-color'>
-      <h1 className='flex justify-center py-9 text-5xl sm:text-4xl font-base-text text-white'>
+      <h1 className='flex justify-center py-9 font-base-text text-5xl text-white sm:text-4xl'>
         Products
       </h1>
       <div className='flex justify-center'>
@@ -17,7 +17,7 @@ export const Products: FC<ProductsProps> = ({ products }: ProductsProps) => {
           {products.map((product) => (
             <div
               key={product.id}
-              className='col-span-6 sm:col-span-6 md:col-span-3 lg:col-span-3 xl:col-span-2 px-4 py-4'
+              className='col-span-6 p-4 sm:col-span-6 md:col-span-3 lg:col-span-3 xl:col-span-2'
             >
               <ProductCard
                 title={product.title}

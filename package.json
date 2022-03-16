@@ -10,7 +10,8 @@
     "build-storybook": "build-storybook",
     "lint": "eslint . --ext .ts,.js,.tsx,.jsx",
     "lint:fix": "eslint --fix . --ext .ts,.js,.tsx,.jsx",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "fix:lint": "next lint --fix"
   },
   "husky": {
     "hooks": {
@@ -52,6 +53,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-storybook": "^0.5.5",
+    "eslint-plugin-tailwindcss": "^3.5.0",
     "husky": "^7.0.4",
     "lint-staged": "^12.1.5",
     "prettier": "^2.5.1",
