@@ -6,6 +6,7 @@ export type Product = {
   revisedAt?: string;
   title: string;
   content: string;
+  link?: string;
   image: {
     url: string;
     height: number;

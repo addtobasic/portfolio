@@ -8,13 +8,14 @@ export type ProductsProps = {
 
 export const Products: FC<ProductsProps> = ({ products }: ProductsProps) => {
   return (
-    <div>
+    <div className='bg-bg-products-color'>
       <ul>
         {products.map((product) => (
-          <div key={product.id}>
+          <div key={product.id} className='px-4 py-4'>
             <ProductCard
               title={product.title}
               content={product.content}
+              link={product.link}
               image={product.image}
             />
           </div>
