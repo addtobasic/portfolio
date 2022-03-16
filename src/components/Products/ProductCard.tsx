@@ -13,11 +13,11 @@ export const ProductCard: FC<Product> = ({
   image,
 }: Product) => {
   return (
-    <div className='bg-bg-product-card-color max-w-md rounded-xl overflow-hidden border-gray-300 border-2'>
+    <div className='overflow-hidden max-w-md bg-bg-product-card-color rounded-xl border-2 border-gray-300'>
       <a href={link} target='_blank' rel='noreferrer'>
         <img className='w-full' src={image.url} alt={title} />
-        <div className='px-5 py-6 h-32'>
-          <div className='font-bold font-base-text text-white text-xl mb-2'>
+        <div className='py-6 px-5 h-32'>
+          <div className='mb-2 font-base-text text-xl font-bold text-white'>
             {title}
           </div>
           <p className='font-base-text text-white'>{content}</p>

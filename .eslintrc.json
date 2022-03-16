@@ -4,14 +4,15 @@
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "plugin:tailwindcss/recommended"
   ],
   "settings": {
     "react": {
       "version": "latest"
     }
   },
-  "plugins": ["@typescript-eslint"],
+  "plugins": ["@typescript-eslint", "tailwindcss"],
   "parser": "@typescript-eslint/parser",
   "env": {
     "browser": true,

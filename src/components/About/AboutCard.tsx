@@ -18,8 +18,8 @@ export const ABOUT_CARD_ITEM = [
 export const AboutCard: FC = () => {
   return (
     <div>
-      <div className='bg-white border-gray-300 border-2 shadow-2xl rounded-xl w-[30rem] py-7 px-5'>
-        <div className='font-bold font-base-text text-lg mb-4'>
+      <div className='py-7 px-5 w-[30rem] bg-white rounded-xl border-2 border-gray-300'>
+        <div className='mb-4 font-base-text text-lg font-bold'>
           面白いと思ったもの, ほしいと思ったもの,
           趣味に関するものを作るのがすきです
         </div>
