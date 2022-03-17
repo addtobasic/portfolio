@@ -7,7 +7,7 @@ import { client } from '../lib/client';
 import { Products } from '../components/Products';
 import type { Product } from '../../types/product';
 
-import { Histories } from '../components/Histories';
+import { Histories } from '../components/History';
 import type { History } from '../../types/history';
 
 export default function Home(props: {

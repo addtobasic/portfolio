@@ -10,8 +10,11 @@ export const Histories: FC<HistoriesProps> = ({
   histories,
 }: HistoriesProps) => {
   return (
-    <div>
-      <ul>
+    <div className='bg-primary-light-color'>
+      <h1 className='flex justify-center py-9 font-base-text text-5xl sm:text-4xl'>
+        History
+      </h1>
+      <div className=''>
         {histories.map((history) => (
           <div key={history.id}>
             <HistoryCard
@@ -23,7 +26,7 @@ export const Histories: FC<HistoriesProps> = ({
             />
           </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };
