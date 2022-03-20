@@ -34,7 +34,6 @@ export const ContactCard: FC = () => {
         description +
         '\n',
     };
-    console.error(payload);
 
     fetch(url, {
       method: 'POST',
