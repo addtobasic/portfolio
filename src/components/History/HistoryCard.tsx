@@ -10,7 +10,6 @@ export const HistoryCard: FC<History> = ({
   title,
   content,
   date,
-  color,
   link,
 }: History) => {
   return (
