@@ -15,7 +15,7 @@ export const Histories: FC<HistoriesProps> = ({
         History
       </h1>
       <div className='flex justify-center'>
-        <div className=' px-4 pb-10 sm:w-auto md:w-5/6 lg:w-4/6 xl:w-4/6'>
+        <div className='px-3 pb-10 w-5/6 sm:w-auto md:w-5/6 lg:w-4/6 xl:w-3/6'>
           <div className='py-7 px-5 bg-white rounded-xl border-2 border-gray-300 shadow-lg'>
             {histories.map((history) => (
               <div key={history.id}>
