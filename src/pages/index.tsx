@@ -9,6 +9,7 @@ import type { Product } from '../../types/product';
 
 import { Histories } from '../components/History';
 import type { History } from '../../types/history';
+import { Contact } from '../components/Contact';
 
 export default function Home(props: {
   products: Product[];
@@ -25,6 +26,7 @@ export default function Home(props: {
       <About />
       <Products products={props.products} />
       <Histories histories={props.histories} />
+      <Contact />
     </div>
   );
 }
