@@ -4,7 +4,7 @@ export const ContactCard: FC = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [description, setDescription] = useState('');
-  const url = process.env.INCOMING_WEBHOOK_URL || '';
+  const url = process.env.NEXT_PUBLIC_INCOMING_WEBHOOK_URL || '';
 
   const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setName(e.target.value);
