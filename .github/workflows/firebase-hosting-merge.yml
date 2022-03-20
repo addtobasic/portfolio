@@ -20,6 +20,7 @@ jobs:
         env:
           MICROCMS_API_KEY: ${{ secrets.MICROCMS_API_KEY }}
           MICROCMS_SERVICE_ID: ${{ secrets.MICROCMS_SERVICE_ID }}
+          INCOMING_WEBHOOK_URL: ${{ secrets.INCOMING_WEBHOOK_URL }}
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
