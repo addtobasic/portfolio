@@ -13,7 +13,7 @@ export const ProductCard: FC<Product> = ({
   image,
 }: Product) => {
   return (
-    <div className='overflow-hidden max-w-md bg-bg-product-card-color rounded-xl border-2 border-gray-300 shadow-2xl'>
+    <div className='overflow-hidden max-w-md bg-bg-product-card-color rounded-xl border-2 border-gray-300 shadow-2xl hover:opacity-60'>
       <a href={link} target='_blank' rel='noreferrer'>
         <img className='w-full' src={image.url} alt={title} />
         <div className='py-6 px-5 h-32'>
