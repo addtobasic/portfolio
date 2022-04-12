@@ -24,7 +24,7 @@ export const HistoryCard: FC<History> = ({
                 {date}
               </time>
             </div>
-            <h5 className='ml-8 font-bold text-gray-600 sm:text-base'>
+            <h5 className='ml-8 font-bold text-blue-500 sm:text-base'>
               <a href={link} target='_blank' rel='noreferrer'>
                 {title}
               </a>
