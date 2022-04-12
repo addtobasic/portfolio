@@ -1,4 +1,5 @@
 import { FC, useState } from 'react';
+import { FadeIn } from '../FadeIn';
 
 export const ContactCard: FC = () => {
   const [name, setName] = useState('');
@@ -48,54 +49,56 @@ export const ContactCard: FC = () => {
 
   return (
     <div className='w-5/6 sm:w-full md:w-5/6 lg:w-4/6 xl:w-3/6'>
-      <div className='pt-7 bg-bg-contact-card-color rounded-xl border-2 border-gray-300 shadow-lg'>
-        <div className='flex justify-center'>
-          <div className='px-4 w-full'>
-            <form className='pb-7'>
-              <div className='flex items-center py-1 border-b border-teal-500'>
-                <input
-                  className='py-1 px-2 mr-3 w-full leading-tight text-white bg-transparent border-none focus:outline-none appearance-none'
-                  type='text'
-                  placeholder='お名前'
-                  value={name}
-                  onChange={handleNameChange}
-                />
-              </div>
-            </form>
-            <form className='pb-10 w-full'>
-              <div className='flex items-center py-1 border-b border-teal-500'>
-                <input
-                  className='py-1 px-2 mr-3 w-full leading-tight text-white bg-transparent border-none focus:outline-none appearance-none'
-                  type='text'
-                  placeholder='メールアドレス'
-                  value={email}
-                  onChange={handleEmailChange}
-                />
-              </div>
-            </form>
-            <form className='w-full'>
-              <div className='flex items-center py-1 rounded border'>
-                <textarea
-                  className='py-1 px-2 mr-3 w-full h-20 leading-tight text-white bg-transparent border-none focus:outline-none appearance-none'
-                  placeholder='問い合わせ内容'
-                  value={description}
-                  onChange={handleDescriptionChange}
-                />
-              </div>
-            </form>
+      <FadeIn>
+        <div className='pt-7 bg-bg-contact-card-color rounded-xl border-2 border-gray-300 shadow-lg'>
+          <div className='flex justify-center'>
+            <div className='px-4 w-full'>
+              <form className='pb-7'>
+                <div className='flex items-center py-1 border-b border-teal-500'>
+                  <input
+                    className='py-1 px-2 mr-3 w-full leading-tight text-white bg-transparent border-none focus:outline-none appearance-none'
+                    type='text'
+                    placeholder='お名前'
+                    value={name}
+                    onChange={handleNameChange}
+                  />
+                </div>
+              </form>
+              <form className='pb-10 w-full'>
+                <div className='flex items-center py-1 border-b border-teal-500'>
+                  <input
+                    className='py-1 px-2 mr-3 w-full leading-tight text-white bg-transparent border-none focus:outline-none appearance-none'
+                    type='text'
+                    placeholder='メールアドレス'
+                    value={email}
+                    onChange={handleEmailChange}
+                  />
+                </div>
+              </form>
+              <form className='w-full'>
+                <div className='flex items-center py-1 rounded border'>
+                  <textarea
+                    className='py-1 px-2 mr-3 w-full h-20 leading-tight text-white bg-transparent border-none focus:outline-none appearance-none'
+                    placeholder='問い合わせ内容'
+                    value={description}
+                    onChange={handleDescriptionChange}
+                  />
+                </div>
+              </form>
+            </div>
+          </div>
+          <div className='flex flex-row-reverse py-2 pr-4'>
+            <button
+              className='py-2 px-3 font-bold text-white bg-blue-600 hover:bg-blue-500 rounded border border-blue-700'
+              onClick={() => {
+                sendContents(name, email, description);
+              }}
+            >
+              Send
+            </button>
           </div>
         </div>
-        <div className='flex flex-row-reverse py-2 pr-4'>
-          <button
-            className='py-2 px-3 font-bold text-white bg-blue-600 hover:bg-blue-500 rounded border border-blue-700'
-            onClick={() => {
-              sendContents(name, email, description);
-            }}
-          >
-            Send
-          </button>
-        </div>
-      </div>
+      </FadeIn>
     </div>
   );
 };
