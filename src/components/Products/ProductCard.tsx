@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { FadeIn } from '../FadeIn';
 
 import type { Product } from '../../../types/product';
 
@@ -13,16 +14,18 @@ export const ProductCard: FC<Product> = ({
   image,
 }: Product) => {
   return (
-    <div className='overflow-hidden max-w-md bg-bg-product-card-color rounded-xl border-2 border-gray-300 shadow-2xl hover:opacity-60'>
-      <a href={link} target='_blank' rel='noreferrer'>
-        <img className='w-full' src={image.url} alt={title} />
-        <div className='py-6 px-5 h-32'>
-          <div className='mb-2 font-base-text text-xl font-bold text-white'>
-            {title}
+    <FadeIn>
+      <div className='overflow-hidden max-w-md bg-bg-product-card-color rounded-xl border-2 border-gray-300 shadow-2xl hover:opacity-60'>
+        <a href={link} target='_blank' rel='noreferrer'>
+          <img className='w-full' src={image.url} alt={title} />
+          <div className='py-6 px-5 h-32'>
+            <div className='mb-2 font-base-text text-xl font-bold text-white'>
+              {title}
+            </div>
+            <p className='font-base-text text-white'>{content}</p>
           </div>
-          <p className='font-base-text text-white'>{content}</p>
-        </div>
-      </a>
-    </div>
+        </a>
+      </div>
+    </FadeIn>
   );
 };
