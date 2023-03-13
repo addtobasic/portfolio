@@ -12,7 +12,7 @@ export const ABOUT_CARD_ITEM = [
     text: 'FuraIT, 旭川ゆるい勉強会, LOCAL学生部',
   },
   {
-    text: 'Twitter, ノベルゲーム, スマブラ',
+    text: 'プログラミング, ゲーム, 飲酒',
   },
 ];
 
