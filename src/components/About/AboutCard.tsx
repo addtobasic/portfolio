@@ -6,7 +6,7 @@ import { FadeIn } from '../FadeIn';
 
 export const ABOUT_CARD_ITEM = [
   {
-    text: '旭川工業高等専門学校 システム制御情報工学科 5年',
+    text: '公立はこだて未来大学 情報デザインコース 2年',
   },
   {
     text: 'FuraIT, 旭川ゆるい勉強会, LOCAL学生部',
