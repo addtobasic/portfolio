@@ -1,8 +1,10 @@
 import Head from 'next/head';
 
 import { TopPage } from '../components/TopPage';
-import { About } from '../components/About';
 import { client } from '../lib/client';
+
+import { About } from '../components/About';
+import type { Profile } from '../../types/profile';
 
 import { Products } from '../components/Products';
 import type { Product } from '../../types/product';
@@ -12,6 +14,7 @@ import type { History } from '../../types/history';
 import { Contact } from '../components/Contact';
 
 export default function Home(props: {
+  profile: Profile;
   products: Product[];
   histories: History[];
 }) {
@@ -23,7 +26,7 @@ export default function Home(props: {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <TopPage />
-      <About />
+      <About profile={props.profile} />
       <Products products={props.products} />
       <Histories histories={props.histories} />
       <Contact />
@@ -32,6 +35,11 @@ export default function Home(props: {
 }
 
 export const getStaticProps = async () => {
+  const profile_data = await client.get({
+    endpoint: 'profile',
+    queries: { limit: 30 },
+  });
+
   const products_data = await client.get({
     endpoint: 'products',
     queries: { limit: 30 },
@@ -43,6 +51,7 @@ export const getStaticProps = async () => {
 
   return {
     props: {
+      profile: profile_data,
       products: products_data.contents,
       histories: histories_data.contents,
     },
