@@ -1,13 +1,39 @@
 .icon {
-  background-image: url('../../public/genshi.jpg');
+  background-image: url('../../public/img/genshi.jpg');
   background-size: contain;
   height: 30vh;
   width: 30vh;
   border-radius: 50%;
   cursor: pointer;
+  background-color: white;
+
+  animation: fade-in 3s ease-in-out;
 }
 .icon:active {
-  background-image: url('../../public//mabataki.png');
+  background-image: url('../../public/img/mabataki.png');
+}
+
+@keyframes fade-in {
+  0% {
+    background-image: url('../../public/img/genshi_line_animated.svg');
+  }
+
+  25% {
+    background-image: url('../../public/img/genshi_line_animated.svg');
+  }
+
+  50% {
+    background-image: url('../../public/img/genshi_line_animated.svg');
+  }
+
+  75% {
+    background-image: url('../../public/img/genshi_line_animated.svg');
+  }
+
+  100% {
+    background-image: url('../../public/img/genshi.jpg');
+    opacity: 1;
+  }
 }
 
 .center {

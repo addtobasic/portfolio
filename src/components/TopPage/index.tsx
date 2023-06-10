@@ -1,12 +1,12 @@
 import { FC } from 'react';
-import { LinkIcon } from './LinkIcon';
 import styles from '../../styles/Home.module.css';
+import { LinkIcon } from './LinkIcon';
 
 export const TopPage: FC = () => {
   return (
     <div className='min-h-screen bg-primary-dark-color'>
       <div className={styles.center}>
-        <div className='flex justify-center'>
+        <div className='relative flex justify-center'>
           <div className={styles.icon} />
         </div>
         <h1 className='flex justify-center pt-6 font-base-text text-4xl text-white'>
