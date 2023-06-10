@@ -1,5 +1,5 @@
 .icon {
-  background-image: url('../../public/genshi.jpg');
+  background-image: url('../../public/img/genshi.jpg');
   background-size: contain;
   height: 30vh;
   width: 30vh;
@@ -7,7 +7,7 @@
   cursor: pointer;
 }
 .icon:active {
-  background-image: url('../../public//mabataki.png');
+  background-image: url('../../public/img/mabataki.png');
 }
 
 .center {
