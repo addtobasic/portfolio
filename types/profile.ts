@@ -4,6 +4,7 @@ export type Profile = {
   updatedAt?: string;
   publishedAt?: string;
   revisedAt?: string;
+  introductionText?: string;
   affiliation?: string;
   community?: string;
   hobby?: string;
