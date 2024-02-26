@@ -46,7 +46,7 @@ export const getStaticProps = async () => {
   });
   const histories_data = await client.get({
     endpoint: 'histories',
-    queries: { limit: 30 },
+    queries: { limit: 50 },
   });
 
   return {
