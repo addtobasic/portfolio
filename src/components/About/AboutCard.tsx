@@ -11,7 +11,7 @@ export const AboutCard: FC<ProfileProps> = ({ profile }: ProfileProps) => {
       <div>
         <div className='w-[30rem] rounded-xl border-2 border-gray-300 bg-white py-7 px-5 shadow-lg'>
           <div className='mb-4 font-base-text text-lg font-bold'>
-            好きなものが好きです
+            {profile.introductionText}
           </div>
           <div className='pt-5'>
             <IconContext.Provider value={{ color: 'black', size: '25px' }}>
