@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import type { History } from '../../../types/history';
 import { HistoryCard } from './HistoryCard';
+import { Copyright } from './Copyright';
 
 export type HistoriesProps = {
   histories: History[];
@@ -34,6 +35,7 @@ export const Histories: FC<HistoriesProps> = ({
           </div>
         </div>
       </div>
+      <Copyright />
     </div>
   );
 };

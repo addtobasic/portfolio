@@ -10,7 +10,7 @@ export const TopPage: FC = () => {
           <div className={styles.icon} />
         </div>
         <h1 className='flex justify-center pt-6 font-base-text text-4xl text-white'>
-          Genshi
+          genshi
         </h1>
         <h2 className='flex justify-center pt-1 pb-6 font-base-text text-2xl text-white'>
           Genki Kano
