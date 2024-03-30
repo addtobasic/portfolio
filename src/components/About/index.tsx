@@ -12,8 +12,12 @@ export const About: FC<ProfileProps> = ({ profile }: ProfileProps) => {
       <h1 className='flex justify-center py-9 font-base-text text-5xl sm:text-4xl'>
         About Me
       </h1>
-      <div className='flex justify-center px-4 pb-10'>
-        <AboutCard profile={profile} />
+      <div className='flex justify-center'>
+        <div className='px-3 pb-10 w-5/6 sm:w-auto md:w-5/6 lg:w-4/6 xl:w-3/6'>
+          <div className='py-7 px-5 bg-white rounded-xl border-2 border-gray-300 shadow-lg'>
+            <AboutCard profile={profile} />
+          </div>
+        </div>
       </div>
     </div>
   );
