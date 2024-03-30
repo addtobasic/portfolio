@@ -26,7 +26,7 @@ export const LINK_ICON_ITEM = [
     url: 'https://www.instagram.com/addtobasic',
   },
   {
-    url: 'https://qiita.com/addtobasic',
+    url: 'https://zenn.dev/addtobasic',
   },
 ];
 
