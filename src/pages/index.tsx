@@ -3,20 +3,7 @@ import Head from 'next/head';
 import { TopPage } from '../components/TopPage';
 import { client } from '../lib/client';
 
-import { About } from '../components/About';
-import type { Profile } from '../../types/profile';
-
-import { Products } from '../components/Products';
-import type { Product } from '../../types/product';
-
-import { Histories } from '../components/History';
-import type { History } from '../../types/history';
-
-export default function Home(props: {
-  profile: Profile;
-  products: Product[];
-  histories: History[];
-}) {
+export default function Home() {
   return (
     <div>
       <Head>
@@ -25,9 +12,9 @@ export default function Home(props: {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <TopPage />
-      <About profile={props.profile} />
-      <Products products={props.products} />
-      <Histories histories={props.histories} />
+      {/* <About profile={props.profile} />
+      <Products products={props.products} /> */}
+      {/* <Histories histories={props.histories} /> */}
     </div>
   );
 }
